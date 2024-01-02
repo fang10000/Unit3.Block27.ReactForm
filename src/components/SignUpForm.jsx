@@ -7,6 +7,7 @@ export default function SignUpForm( {setToken} ) {
   const [error, setError] = useState(null);
   const [passwordMatchError, setPasswordMatchError] = useState("");
   const [RepeatPassword, setRepeatPassword] = useState("");
+  const [successMessage, setSuccessMessage] = useState(""); 
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -28,6 +29,10 @@ export default function SignUpForm( {setToken} ) {
         );
       const result = await response.json();
       setToken(result.token);
+      setSuccessMessage("Sign up successful!"); 
+      setUsername(""); 
+      setPassword("");
+      setRepeatPassword("");
       console.log(result);
     } catch (error) {
       setError(error.message);
@@ -38,6 +43,7 @@ export default function SignUpForm( {setToken} ) {
     <>
       <h2>Sign Up to Join Us!</h2>
       {error && <p>{error}</p>}
+      {successMessage && <p style={{ color: "green" }}>{successMessage}</p>}
 
       <form onSubmit={handleSubmit}>
         <label>
@@ -68,7 +74,7 @@ export default function SignUpForm( {setToken} ) {
             value={RepeatPassword}
             onChange={(e) => {
               setRepeatPassword(e.target.value);
-              setPasswordMatchError(''); // Reset error message on input change
+              setPasswordMatchError(''); 
             }}
           />
         </label>

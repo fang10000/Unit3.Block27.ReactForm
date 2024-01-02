@@ -27,7 +27,7 @@ export default function Authenticate({ token }) {
     <div>
       <h2>Authenticate</h2>
       {successMessage && <p style={{ color: 'black' }}>{successMessage}</p>}
-      {error && <p style={{ color: 'black' }}>{error}</p>}
+      {error && <p style={{ color: 'black' }}> {error}</p>}
       <button onClick={handleClick}>Authenticate Token!</button>
     </div>
   );

@@ -1,6 +1,7 @@
 # Unit 3 Block 27 React Forms
 
-- Form includes a field to re-enter password when signing up. If the re-entered password does not match the initial input, an error message will display to indicate "Passwords do not match". 
+- When signup is __successful__, a message saying "Sign up successful!" will display in green and form will reset
+- The form asks user to re-enter password when signing up. If the re-entered password does not match the initial password input, an error message in red will display to indicate "Passwords do not match". 
 
 
 # React + Vite
