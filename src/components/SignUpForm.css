@@ -1,0 +1,25 @@
+input[type="text"],
+input[type="password"] {
+  border-radius: 18px;
+  border-width: 0px;
+  margin-top: 20px;
+  height: 30px;
+  width: 250px;
+  background-color: bisque;
+  text-align: center;
+  color:rgb(104, 102, 102);
+}
+
+button {
+  border-radius: 18px;
+  border-width: 0px;
+  background-color: pink;
+  margin-top: 20px;
+  height: 30px;
+  width: 250px;
+  color: rgb(104, 102, 102);
+}
+
+h2 {
+  color: black;
+}
